@@ -1,4 +1,6 @@
-namespace PlatformerCamera {
+using PlatformerCamera.Facades;
+
+namespace PlatformerCamera.Phases {
 
     internal class PlatfStatePhase {
 

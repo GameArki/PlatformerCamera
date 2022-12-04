@@ -1,4 +1,6 @@
 using UnityEngine;
+using PlatformerCamera.Facades;
+using PlatformerCamera.Phases;
 
 namespace PlatformerCamera {
 
@@ -29,6 +31,10 @@ namespace PlatformerCamera {
             this.initPhase = new PlatfInitPhase();
             this.statePhase = new PlatfStatePhase();
             this.applyPhase = new PlatfApplyPhase();
+
+            this.initPhase.Inject(ctx, domain);
+            this.statePhase.Inject(ctx, domain);
+            this.applyPhase.Inject(ctx, domain);
 
             this.setterAPI.Inject(ctx, domain);
 

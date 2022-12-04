@@ -1,4 +1,6 @@
-namespace PlatformerCamera {
+using PlatformerCamera.Facades;
+
+namespace PlatformerCamera.Phases {
 
     internal class PlatfApplyPhase {
 
@@ -13,7 +15,10 @@ namespace PlatformerCamera {
         }
 
         internal void Tick(float dt) {
-            
+            var curCam = ctx.Repo.Current;
+            var mainCam = ctx.MainCam;
+
+            mainCam.transform.position = curCam.CurrentInfoCom.Pos;
         }
 
     }

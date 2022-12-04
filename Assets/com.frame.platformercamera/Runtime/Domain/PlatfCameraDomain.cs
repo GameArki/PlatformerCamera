@@ -1,4 +1,8 @@
-namespace PlatformerCamera {
+using UnityEngine;
+using PlatformerCamera.Facades;
+using PlatformerCamera.Entities;
+
+namespace PlatformerCamera.Domain {
 
     internal class PlatfCameraDomain {
 
@@ -8,6 +12,10 @@ namespace PlatformerCamera {
 
         internal void Inject(AllPlatfContext ctx) {
             this.ctx = ctx;
+        }
+
+        internal void Move_Current(PlatfCameraEntity cam, Vector2 offset) {
+            cam.Move(offset);
         }
 
     }

@@ -1,4 +1,6 @@
-namespace PlatformerCamera {
+using PlatformerCamera.Entities;
+
+namespace PlatformerCamera.Facades {
 
     internal class PlatfFactory {
 

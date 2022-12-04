@@ -1,4 +1,6 @@
-namespace PlatformerCamera {
+using PlatformerCamera.Domain;
+
+namespace PlatformerCamera.Facades {
 
     internal class AllPlatfDomain {
 

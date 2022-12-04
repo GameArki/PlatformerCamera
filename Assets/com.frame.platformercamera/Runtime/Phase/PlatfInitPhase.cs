@@ -1,4 +1,7 @@
-namespace PlatformerCamera {
+using PlatformerCamera.Facades;
+using PlatformerCamera.Entities;
+
+namespace PlatformerCamera.Phases {
 
     internal class PlatfInitPhase {
 
@@ -13,7 +16,9 @@ namespace PlatformerCamera {
         }
 
         internal void Init() {
-
+            var cam = new PlatfCameraEntity();
+            cam.CurrentInfoCom.SetPos(ctx.MainCam.transform.position);
+            ctx.Repo.SetCurrent(cam);
         }
 
     }
