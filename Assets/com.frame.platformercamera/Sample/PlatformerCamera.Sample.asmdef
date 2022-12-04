@@ -1,0 +1,16 @@
+{
+    "name": "PlatformerCamera.Sample",
+    "rootNamespace": "",
+    "references": [
+        "GUID:25f98a906b628794b9555b7d48946b6b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
