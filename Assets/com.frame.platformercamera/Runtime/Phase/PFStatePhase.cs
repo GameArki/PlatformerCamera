@@ -1,6 +1,6 @@
-using PFormerCamera.Facades;
+using PlatformerCamera.Facades;
 
-namespace PFormerCamera.Phases {
+namespace PlatformerCamera.Phases {
 
     internal class PFStatePhase {
 

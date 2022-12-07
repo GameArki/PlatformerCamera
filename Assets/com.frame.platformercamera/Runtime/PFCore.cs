@@ -1,8 +1,8 @@
 using UnityEngine;
-using PFormerCamera.Facades;
-using PFormerCamera.Phases;
+using PlatformerCamera.Facades;
+using PlatformerCamera.Phases;
 
-namespace PFormerCamera {
+namespace PlatformerCamera {
 
     public class PFCore {
 

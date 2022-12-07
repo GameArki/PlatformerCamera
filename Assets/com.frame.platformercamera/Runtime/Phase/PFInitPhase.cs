@@ -1,7 +1,7 @@
-using PFormerCamera.Facades;
-using PFormerCamera.Entities;
+using PlatformerCamera.Facades;
+using PlatformerCamera.Entities;
 
-namespace PFormerCamera.Phases {
+namespace PlatformerCamera.Phases {
 
     internal class PFInitPhase {
 

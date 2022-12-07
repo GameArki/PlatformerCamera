@@ -1,8 +1,8 @@
 using UnityEngine;
-using PFormerCamera.Facades;
-using PFormerCamera.Entities;
+using PlatformerCamera.Facades;
+using PlatformerCamera.Entities;
 
-namespace PFormerCamera.Domain {
+namespace PlatformerCamera.Domain {
 
     internal class PFCameraDomain {
 

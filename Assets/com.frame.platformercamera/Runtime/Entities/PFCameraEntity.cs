@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace PFormerCamera.Entities {
+namespace PlatformerCamera.Entities {
 
     internal class PFCameraEntity {
 

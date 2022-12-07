@@ -1,6 +1,6 @@
-using PFormerCamera.Entities;
+using PlatformerCamera.Entities;
 
-namespace PFormerCamera.Repo {
+namespace PlatformerCamera.Repo {
 
     internal class PFCameraRepo {
 

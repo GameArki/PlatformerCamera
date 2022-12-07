@@ -1,7 +1,7 @@
 using UnityEngine;
-using PFormerCamera.Repo;
+using PlatformerCamera.Repo;
 
-namespace PFormerCamera.Facades {
+namespace PlatformerCamera.Facades {
 
     internal class AllPFContext {
 

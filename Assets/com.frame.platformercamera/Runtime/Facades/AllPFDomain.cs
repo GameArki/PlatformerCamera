@@ -1,6 +1,6 @@
-using PFormerCamera.Domain;
+using PlatformerCamera.Domain;
 
-namespace PFormerCamera.Facades {
+namespace PlatformerCamera.Facades {
 
     internal class AllPFDomain {
 

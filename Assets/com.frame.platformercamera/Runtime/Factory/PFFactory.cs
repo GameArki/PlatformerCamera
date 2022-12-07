@@ -1,6 +1,6 @@
-using PFormerCamera.Entities;
+using PlatformerCamera.Entities;
 
-namespace PFormerCamera.Facades {
+namespace PlatformerCamera.Facades {
 
     internal class PFFactory {
 

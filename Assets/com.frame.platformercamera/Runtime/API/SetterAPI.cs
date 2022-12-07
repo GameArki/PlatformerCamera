@@ -1,7 +1,7 @@
-using PFormerCamera.Facades;
+using PlatformerCamera.Facades;
 using UnityEngine;
 
-namespace PFormerCamera {
+namespace PlatformerCamera {
 
     internal class SetterAPI : ISetterAPI {
 

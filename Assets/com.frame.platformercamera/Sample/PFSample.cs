@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace PFormerCamera.Sample {
+namespace PlatformerCamera.Sample {
 
     public class PFSample : MonoBehaviour {
 
