@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace PlatformerCamera {
+namespace PFormerCamera {
 
     public interface ISetterAPI {
 

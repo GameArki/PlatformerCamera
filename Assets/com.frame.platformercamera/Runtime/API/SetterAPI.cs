@@ -1,16 +1,16 @@
-using PlatformerCamera.Facades;
+using PFormerCamera.Facades;
 using UnityEngine;
 
-namespace PlatformerCamera {
+namespace PFormerCamera {
 
     internal class SetterAPI : ISetterAPI {
 
-        AllPlatfContext ctx;
-        AllPlatfDomain allDomain;
+        AllPFContext ctx;
+        AllPFDomain allDomain;
 
         internal SetterAPI() {}
 
-        internal void Inject(AllPlatfContext ctx, AllPlatfDomain domain) {
+        internal void Inject(AllPFContext ctx, AllPFDomain domain) {
             this.ctx = ctx;
             this.allDomain = domain;
         }

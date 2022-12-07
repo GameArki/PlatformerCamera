@@ -1,11 +1,11 @@
 {
-    "name": "PlatformerCamera.Sample",
+    "name": "PFormerCamera.Sample",
     "rootNamespace": "",
     "references": [
         "GUID:25f98a906b628794b9555b7d48946b6b"
     ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
+    "includePForms": [],
+    "excludePForms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],

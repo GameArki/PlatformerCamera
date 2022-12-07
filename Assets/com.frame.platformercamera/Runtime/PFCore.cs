@@ -1,36 +1,36 @@
 using UnityEngine;
-using PlatformerCamera.Facades;
-using PlatformerCamera.Phases;
+using PFormerCamera.Facades;
+using PFormerCamera.Phases;
 
-namespace PlatformerCamera {
+namespace PFormerCamera {
 
-    public class PlatfCore {
+    public class PFCore {
 
         // ==== API ====
         SetterAPI setterAPI;
         public ISetterAPI SetterAPI => setterAPI;
 
         // ==== Context ====
-        AllPlatfContext ctx;
-        AllPlatfDomain domain;
+        AllPFContext ctx;
+        AllPFDomain domain;
 
         // ==== Phases ====
-        PlatfInitPhase initPhase;
-        PlatfStatePhase statePhase;
-        PlatfApplyPhase applyPhase;
+        PFInitPhase initPhase;
+        PFStatePhase statePhase;
+        PFApplyPhase applyPhase;
 
         // ==== State ====
         bool isInit;
 
-        public PlatfCore() {
+        public PFCore() {
 
             this.setterAPI = new SetterAPI();
-            this.ctx = new AllPlatfContext();
-            this.domain = new AllPlatfDomain();
+            this.ctx = new AllPFContext();
+            this.domain = new AllPFDomain();
 
-            this.initPhase = new PlatfInitPhase();
-            this.statePhase = new PlatfStatePhase();
-            this.applyPhase = new PlatfApplyPhase();
+            this.initPhase = new PFInitPhase();
+            this.statePhase = new PFStatePhase();
+            this.applyPhase = new PFApplyPhase();
 
             this.initPhase.Inject(ctx, domain);
             this.statePhase.Inject(ctx, domain);

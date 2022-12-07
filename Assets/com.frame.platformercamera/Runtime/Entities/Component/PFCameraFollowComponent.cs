@@ -1,9 +1,9 @@
 using UnityEngine;
 using JackEasing;
 
-namespace PlatformerCamera.Entities {
+namespace PFormerCamera.Entities {
 
-    public class PlatfCameraFollowComponent {
+    public class PFCameraFollowComponent {
 
         Transform target;
         public Transform Target => target;
@@ -17,7 +17,7 @@ namespace PlatformerCamera.Entities {
         float easingTime;
         float easingDuration;
 
-        public PlatfCameraFollowComponent() { }
+        public PFCameraFollowComponent() { }
 
         public void InitFollow(Transform target, Vector2 offset, EasingType easingType, float easingTime, float easingDuration) {
             this.target = target;

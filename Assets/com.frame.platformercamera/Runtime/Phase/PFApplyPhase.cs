@@ -1,15 +1,15 @@
-using PlatformerCamera.Facades;
+using PFormerCamera.Facades;
 
-namespace PlatformerCamera.Phases {
+namespace PFormerCamera.Phases {
 
-    internal class PlatfApplyPhase {
+    internal class PFApplyPhase {
 
-        AllPlatfContext ctx;
-        AllPlatfDomain domain;
+        AllPFContext ctx;
+        AllPFDomain domain;
 
-        internal PlatfApplyPhase() { }
+        internal PFApplyPhase() { }
 
-        internal void Inject(AllPlatfContext ctx, AllPlatfDomain domain) {
+        internal void Inject(AllPFContext ctx, AllPFDomain domain) {
             this.ctx = ctx;
             this.domain = domain;
         }

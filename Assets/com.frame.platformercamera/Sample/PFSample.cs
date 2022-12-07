@@ -1,14 +1,14 @@
 using UnityEngine;
 
-namespace PlatformerCamera.Sample {
+namespace PFormerCamera.Sample {
 
-    public class PlatfSample : MonoBehaviour {
+    public class PFSample : MonoBehaviour {
 
-        PlatfCore platfCore;
+        PFCore pfCore;
 
         void Awake() {
-            platfCore = new PlatfCore();
-            platfCore.Initialize(Camera.main);
+            pfCore = new PFCore();
+            pfCore.Initialize(Camera.main);
         }
 
         void Update() {
@@ -28,14 +28,14 @@ namespace PlatformerCamera.Sample {
             }
 
             if (dir != Vector2.zero) {
-                platfCore.SetterAPI.Move_Current(dir * Time.deltaTime);
+                pfCore.SetterAPI.Move_Current(dir * Time.deltaTime);
             }
 
         }
 
         void LateUpdate() {
             float dt = Time.deltaTime;
-            platfCore.Tick(dt);
+            pfCore.Tick(dt);
         }
 
     }
