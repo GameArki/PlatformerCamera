@@ -13,10 +13,14 @@ namespace PlatformerCamera.Entities {
         PFCameraFollowComponent followCom;
         public PFCameraFollowComponent FollowCom => followCom;
 
+        PFConfinerComponent confinerCom;
+        public PFConfinerComponent ConfinerCom => confinerCom;
+
         internal PFCameraEntity() {
             this.defaultInfoCom = new PFCameraInfoComponent();
             this.currentInfoCom = new PFCameraInfoComponent();
             this.followCom = new PFCameraFollowComponent();
+            this.confinerCom = new PFConfinerComponent();
         }
 
         internal void Move(Vector2 offset) {

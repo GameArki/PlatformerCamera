@@ -56,6 +56,28 @@ namespace PlatformerCamera {
             applyPhase.Tick(dt);
         }
 
+#if UNITY_EDITOR
+        float radio = (float)Screen.width / Screen.height;
+#endif
+        public void Editor_DrawGizmos() {
+#if UNITY_EDITOR
+            var curCam = ctx.Repo.Current;
+            var info = curCam.CurrentInfoCom;
+            var confiner = curCam.ConfinerCom;
+            if (confiner.IsEnable) {
+                var viewSize = info.GetViewSize(radio);
+                var confinerSize = confiner.GetSize();
+                Gizmos.color = Color.green;
+                Gizmos.DrawWireCube(info.Pos, viewSize);
+
+                Gizmos.color = Color.red;
+                Gizmos.DrawWireCube(confiner.GetCenter(), confinerSize);
+                
+            }
+#endif
+        }
+
+
     }
 
 }

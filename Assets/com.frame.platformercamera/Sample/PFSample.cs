@@ -14,17 +14,18 @@ namespace PlatformerCamera.Sample {
         void Update() {
 
             var dir = Vector2.zero;
+            float speed = 10f;
 
             if (Input.GetKey(KeyCode.A)) {
-                dir.x = -1;
+                dir.x = -speed;
             } else if (Input.GetKey(KeyCode.D)) {
-                dir.x = 1;
+                dir.x = speed;
             }
 
             if (Input.GetKey(KeyCode.W)) {
-                dir.y = 1;
+                dir.y = speed;
             } else if (Input.GetKey(KeyCode.S)) {
-                dir.y = -1;
+                dir.y = -speed;
             }
 
             if (dir != Vector2.zero) {
@@ -36,6 +37,10 @@ namespace PlatformerCamera.Sample {
         void LateUpdate() {
             float dt = Time.deltaTime;
             pfCore.Tick(dt);
+        }
+
+        void OnDrawGizmos() {
+            pfCore?.Editor_DrawGizmos();
         }
 
     }

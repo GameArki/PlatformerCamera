@@ -1,3 +1,4 @@
+using UnityEngine;
 using PlatformerCamera.Facades;
 using PlatformerCamera.Entities;
 
@@ -17,7 +18,9 @@ namespace PlatformerCamera.Phases {
 
         internal void Init() {
             var cam = new PFCameraEntity();
-            cam.CurrentInfoCom.SetPos(ctx.MainCam.transform.position);
+            var mainCam = ctx.MainCam;
+            cam.CurrentInfoCom.SetPos(mainCam.transform.position);
+            cam.CurrentInfoCom.SetHeightHalfSize(mainCam.orthographicSize);
             ctx.Repo.SetCurrent(cam);
         }
 
