@@ -27,7 +27,7 @@ namespace PlatformerCamera.Entities {
             this.confinerCom = new PFConfinerComponent();
         }
 
-        public void Move(Vector2 offset) {
+        public void Move(Vector3 offset) {
             if (followCom.HasTarget()) {
                 followCom.MoveOffset(offset);
             } else {

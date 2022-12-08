@@ -5,34 +5,69 @@ namespace PlatformerCamera.Entities {
 
     public class PFCameraFollowComponent {
 
-        Transform target;
-        public Transform Target => target;
-        public void SetTarget(Transform value) => target = value;
+        Transform followTF;
+        public Transform FollowTF => followTF;
+        public void SetTarget(Transform value) => followTF = value;
 
-        Vector2 offset;
-        public Vector2 Offset => offset;
-        public void SetOffset(Vector2 value) => offset = value;
+        Vector3 offset;
+        public Vector3 Offset => offset;
+        public void SetOffset(Vector3 value) => offset = value;
 
-        EasingType easingType;
-        float easingTime;
-        float easingDuration;
+        EasingType easeingType;
+        float easeingDuration;
+
+        // ==== Temp ====
+        [SerializeField] Vector3 easeingCurPos;
+        [SerializeField] Vector3 easeingStartPos;
+        [SerializeField] Vector3 easeingDstPos;
+        [SerializeField] float easeingTime;
 
         public PFCameraFollowComponent() { }
 
-        public void InitFollow(Transform target, Vector2 offset, EasingType easingType, float easingTime, float easingDuration) {
-            this.target = target;
+        public void InitFollow(Transform target, Vector3 offset, EasingType easingType, float easeingDuration) {
+            this.followTF = target;
             this.offset = offset;
-            this.easingType = easingType;
-            this.easingTime = easingTime;
-            this.easingDuration = easingDuration;
+            this.easeingType = easingType;
+            this.easeingDuration = easeingDuration;
+        }
+
+        public void TickEasing(float dt) {
+
+            if (followTF == null) {
+                return;
+            }
+
+            if (easeingDuration == 0) {
+                easeingCurPos = followTF.position;
+                return;
+            }
+
+            if (easeingDstPos != followTF.position) {
+                easeingStartPos = easeingCurPos;
+                easeingDstPos = followTF.position;
+                easeingTime = 0;
+            }
+
+            if (easeingTime >= easeingDuration) {
+                return;
+            }
+
+            easeingTime += dt;
+
+            easeingCurPos = EasingHelper.Ease3D(easeingType, easeingTime, easeingDuration, easeingStartPos, easeingDstPos);
+
         }
 
         public bool HasTarget() {
-            return target != null;
+            return followTF != null;
         }
 
-        public void MoveOffset(Vector2 value) {
-            this.offset += value;
+        public void MoveOffset(Vector3 diff) {
+            this.offset += diff;
+        }
+
+        public Vector3 GetFollowPos() {
+            return easeingCurPos + offset;
         }
 
     }

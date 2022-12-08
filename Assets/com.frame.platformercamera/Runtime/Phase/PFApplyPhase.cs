@@ -1,5 +1,6 @@
 using UnityEngine;
 using PlatformerCamera.Facades;
+using PlatformerCamera.Entities;
 
 namespace PlatformerCamera.Phases {
 
@@ -21,26 +22,43 @@ namespace PlatformerCamera.Phases {
             if (curCam == null) {
                 return;
             }
-            var info = curCam.CurrentInfoCom;
+
+            Apply(curCam, dt);
+
+        }
+
+        void Apply(PFCameraEntity cam, float dt) {
+
+            var infoCom = cam.CurrentInfoCom;
+            var followCom = cam.FollowCom;
+
+            Vector3 pos;
+            if (followCom.HasTarget()) {
+                pos = followCom.GetFollowPos();
+            } else {
+                pos = infoCom.Pos;
+            }
+            infoCom.SetPos(pos);
 
             var mainCam = ctx.MainCam;
-            mainCam.transform.position = info.Pos;
+            mainCam.transform.position = pos;
 
             // Apply Confiner
-            var confiner = curCam.ConfinerCom;
+            var confiner = cam.ConfinerCom;
             if (confiner.IsEnable) {
                 float radio = (float)Screen.width / Screen.height;
-                var viewSize = info.GetViewSize(radio);
+                var viewSize = infoCom.GetViewSize(radio);
                 var confinerSize = confiner.GetSize();
                 if ((viewSize.x > confinerSize.x) || (viewSize.y > confinerSize.y)) {
                     Debug.LogError($"Confiner 尺寸:{confinerSize} 小于一屏尺寸:{viewSize}");
                     return;
                 }
-                var camPos = confiner.LockCameraInside(info.Pos, viewSize);
-                info.SetPos(camPos);
-                mainCam.transform.position = camPos;
+                var camPos = confiner.LockCameraInside(infoCom.Pos, viewSize);
+                if (camPos != infoCom.Pos) {
+                    infoCom.SetPos(camPos);
+                    mainCam.transform.position = camPos;
+                }
             }
-
         }
 
     }

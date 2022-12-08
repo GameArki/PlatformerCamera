@@ -16,6 +16,10 @@ namespace PlatformerCamera.Phases {
 
         internal void Tick(float dt) {
 
+            var cur = ctx.Repo.Current;
+            var cameraFSMDomain = domain.CameraFSMDomain;
+            cameraFSMDomain.TickFollow(cur, dt);
+
         }
 
     }

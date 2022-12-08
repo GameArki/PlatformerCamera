@@ -1,3 +1,4 @@
+using JackEasing;
 using PlatformerCamera.Entities;
 using PlatformerCamera.Facades;
 using UnityEngine;
@@ -28,10 +29,17 @@ namespace PlatformerCamera {
         }
 
         // ==== Base Control ====
-        void ISetterAPI.Move_Current(Vector2 offset) {
+        void ISetterAPI.Move_Current(Vector3 offset) {
             var cur = ctx.Repo.Current;
             var domain = allDomain.CameraDomain;
             domain.Move_Current(cur, offset);
+        }
+
+        // ==== Follow ====
+        void ISetterAPI.Follow_Current(Transform target, Vector3 offset, EasingType easingType, float duration) {
+            var cur = ctx.Repo.Current;
+            var domain = allDomain.CameraDomain;
+            domain.Follow_Current(cur, target, offset, easingType, duration);
         }
 
         // ==== Confiner ====
@@ -41,6 +49,7 @@ namespace PlatformerCamera {
             domain.Confiner_Set_Current(cur, min, max);
         }
 
+        
     }
     
 }

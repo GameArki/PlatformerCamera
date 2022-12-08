@@ -1,4 +1,5 @@
 using UnityEngine;
+using JackEasing;
 
 namespace PlatformerCamera.Sample {
 
@@ -6,11 +7,19 @@ namespace PlatformerCamera.Sample {
 
         PFCore pfCore;
 
+        GameObject tar;
+
         void Awake() {
+
+            tar = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            tar.name = "FollowTF";
+
             pfCore = new PFCore();
             pfCore.Initialize(Camera.main);
             _ = pfCore.SetterAPI.SpawnByMain(5);
             pfCore.SetterAPI.Confiner_Set_Current(new Vector2(-20, -20), new Vector2(20, 20));
+
+            pfCore.SetterAPI.Follow_Current(tar.transform, new Vector3(0, 0, -10), EasingType.OutExpo, 2f);
         }
 
         void Update() {

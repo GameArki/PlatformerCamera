@@ -1,4 +1,5 @@
 using UnityEngine;
+using JackEasing;
 using PlatformerCamera.Facades;
 using PlatformerCamera.Entities;
 
@@ -14,6 +15,7 @@ namespace PlatformerCamera.Domain {
             this.ctx = ctx;
         }
 
+        // ==== Spawn ====
         internal PFCameraEntity SpawnByMain(int id) {
             var main = ctx.MainCam;
             var pos = main.transform.position;
@@ -30,10 +32,17 @@ namespace PlatformerCamera.Domain {
             return entity;
         }
 
-        internal void Move_Current(PFCameraEntity cam, Vector2 offset) {
+        // ==== Base Control ====
+        internal void Move_Current(PFCameraEntity cam, Vector3 offset) {
             cam.Move(offset);
         }
 
+        // ==== Follow ====
+        internal void Follow_Current(PFCameraEntity cur, Transform target, Vector3 offset, EasingType easingType, float duration) {
+            cur.FollowCom.InitFollow(target, offset, easingType, duration);
+        }
+
+        // ==== Confiner ====
         internal void Confiner_Set_Current(PFCameraEntity cur, Vector2 min, Vector2 max) {
             cur.ConfinerCom.SetConfiner(min, max);
         }
