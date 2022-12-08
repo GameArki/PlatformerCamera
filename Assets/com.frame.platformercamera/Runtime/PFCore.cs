@@ -32,6 +32,7 @@ namespace PlatformerCamera {
             this.statePhase = new PFStatePhase();
             this.applyPhase = new PFApplyPhase();
 
+            this.domain.Inject(ctx);
             this.initPhase.Inject(ctx, domain);
             this.statePhase.Inject(ctx, domain);
             this.applyPhase.Inject(ctx, domain);
@@ -62,6 +63,9 @@ namespace PlatformerCamera {
         public void Editor_DrawGizmos() {
 #if UNITY_EDITOR
             var curCam = ctx.Repo.Current;
+            if (curCam == null) {
+                return;
+            }
             var info = curCam.CurrentInfoCom;
             var confiner = curCam.ConfinerCom;
             if (confiner.IsEnable) {

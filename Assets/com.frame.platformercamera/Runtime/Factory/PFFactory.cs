@@ -2,9 +2,9 @@ using PlatformerCamera.Entities;
 
 namespace PlatformerCamera.Facades {
 
-    internal class PFFactory {
+    internal static class PFFactory {
 
-        internal PFCameraEntity CreateCameraEntity() {
+        internal static PFCameraEntity CreateCameraEntity() {
             return new PFCameraEntity();
         }
 

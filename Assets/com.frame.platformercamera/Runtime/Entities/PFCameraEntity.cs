@@ -2,7 +2,11 @@ using UnityEngine;
 
 namespace PlatformerCamera.Entities {
 
-    internal class PFCameraEntity {
+    public class PFCameraEntity {
+
+        int id;
+        public int ID => id;
+        public void SetID(int value) => id = value;
 
         PFCameraInfoComponent defaultInfoCom;
         public PFCameraInfoComponent DefaultInfoCom => defaultInfoCom;
@@ -16,14 +20,14 @@ namespace PlatformerCamera.Entities {
         PFConfinerComponent confinerCom;
         public PFConfinerComponent ConfinerCom => confinerCom;
 
-        internal PFCameraEntity() {
+        public PFCameraEntity() {
             this.defaultInfoCom = new PFCameraInfoComponent();
             this.currentInfoCom = new PFCameraInfoComponent();
             this.followCom = new PFCameraFollowComponent();
             this.confinerCom = new PFConfinerComponent();
         }
 
-        internal void Move(Vector2 offset) {
+        public void Move(Vector2 offset) {
             if (followCom.HasTarget()) {
                 followCom.MoveOffset(offset);
             } else {

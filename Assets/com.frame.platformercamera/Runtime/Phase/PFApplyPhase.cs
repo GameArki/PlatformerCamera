@@ -18,6 +18,9 @@ namespace PlatformerCamera.Phases {
         internal void Tick(float dt) {
 
             var curCam = ctx.Repo.Current;
+            if (curCam == null) {
+                return;
+            }
             var info = curCam.CurrentInfoCom;
 
             var mainCam = ctx.MainCam;

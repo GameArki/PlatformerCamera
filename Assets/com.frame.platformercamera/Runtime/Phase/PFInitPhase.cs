@@ -17,11 +17,7 @@ namespace PlatformerCamera.Phases {
         }
 
         internal void Init() {
-            var cam = new PFCameraEntity();
-            var mainCam = ctx.MainCam;
-            cam.CurrentInfoCom.SetPos(mainCam.transform.position);
-            cam.CurrentInfoCom.SetHeightHalfSize(mainCam.orthographicSize);
-            ctx.Repo.SetCurrent(cam);
+            
         }
 
     }

@@ -14,7 +14,9 @@ namespace PlatformerCamera {
         Vector2 worldMax;
         public Vector2 WorldMax => worldMax;
 
-        public PFConfinerComponent() { }
+        public PFConfinerComponent() {
+            this.isEnable = true;
+        }
 
         public void SetConfiner(Vector2 worldMin, Vector2 worldMax) {
             this.worldMin = worldMin;
