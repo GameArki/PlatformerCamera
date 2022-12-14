@@ -57,11 +57,9 @@ namespace PlatformerCamera {
             applyPhase.Tick(dt);
         }
 
-#if UNITY_EDITOR
-        float radio = (float)Screen.width / Screen.height;
-#endif
         public void Editor_DrawGizmos() {
 #if UNITY_EDITOR
+        float radio = (float)Screen.width / Screen.height;
             var curCam = ctx.Repo.Current;
             if (curCam == null) {
                 return;
