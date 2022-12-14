@@ -35,10 +35,10 @@ namespace PlatformerCamera.Phases {
             Vector3 pos;
             if (followCom.HasTarget()) {
                 pos = followCom.GetFollowPos();
+                infoCom.SetPos(pos);
             } else {
                 pos = infoCom.Pos;
             }
-            infoCom.SetPos(pos);
 
             var mainCam = ctx.MainCam;
             mainCam.transform.position = pos;

@@ -67,6 +67,9 @@ namespace PlatformerCamera.Entities {
         }
 
         public Vector3 GetFollowPos() {
+            if (followTF == null) {
+                return Vector3.zero;
+            }
             return easeingCurPos + offset;
         }
 
