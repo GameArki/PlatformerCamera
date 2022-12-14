@@ -17,7 +17,7 @@ namespace PlatformerCamera {
         void Follow_Current(Transform target, Vector3 offset, EasingType easingType, float duration);
 
         // ==== Confiner ====
-        void Confiner_Set_Current(Vector2 min, Vector2 max);
+        void Confiner_Set_Current(bool isEnable, Vector2 min, Vector2 max);
 
     }
 
