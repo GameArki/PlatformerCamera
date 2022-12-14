@@ -49,10 +49,6 @@ namespace PlatformerCamera.Phases {
                 float radio = (float)Screen.width / Screen.height;
                 var viewSize = infoCom.GetViewSize(radio);
                 var confinerSize = confiner.GetSize();
-                if ((viewSize.x > confinerSize.x) || (viewSize.y > confinerSize.y)) {
-                    Debug.LogError($"Confiner 尺寸:{confinerSize} 小于一屏尺寸:{viewSize}");
-                    return;
-                }
                 var camPos = confiner.LockCameraInside(infoCom.Pos, viewSize);
                 if (camPos != infoCom.Pos) {
                     infoCom.SetPos(camPos);

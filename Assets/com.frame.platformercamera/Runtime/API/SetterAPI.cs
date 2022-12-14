@@ -43,10 +43,10 @@ namespace PlatformerCamera {
         }
 
         // ==== Confiner ====
-        void ISetterAPI.Confiner_Set_Current(Vector2 min, Vector2 max) {
+        void ISetterAPI.Confiner_Set_Current(bool isEnable, Vector2 min, Vector2 max) {
             var cur = ctx.Repo.Current;
             var domain = allDomain.CameraDomain;
-            domain.Confiner_Set_Current(cur, min, max);
+            domain.Confiner_Set_Current(cur, isEnable, min, max);
         }
 
         

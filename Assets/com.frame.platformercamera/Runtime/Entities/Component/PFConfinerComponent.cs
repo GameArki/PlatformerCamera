@@ -14,13 +14,12 @@ namespace PlatformerCamera {
         Vector2 worldMax;
         public Vector2 WorldMax => worldMax;
 
-        public PFConfinerComponent() {
-            this.isEnable = true;
-        }
+        public PFConfinerComponent() {}
 
-        public void SetConfiner(Vector2 worldMin, Vector2 worldMax) {
+        public void SetConfiner(bool isEnable, Vector2 worldMin, Vector2 worldMax) {
             this.worldMin = worldMin;
             this.worldMax = worldMax;
+            this.isEnable = isEnable;
         }
 
         public void SetEnable(bool value) {

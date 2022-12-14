@@ -43,8 +43,8 @@ namespace PlatformerCamera.Domain {
         }
 
         // ==== Confiner ====
-        internal void Confiner_Set_Current(PFCameraEntity cur, Vector2 min, Vector2 max) {
-            cur.ConfinerCom.SetConfiner(min, max);
+        internal void Confiner_Set_Current(PFCameraEntity cur, bool isEnable, Vector2 min, Vector2 max) {
+            cur.ConfinerCom.SetConfiner(isEnable, min, max);
         }
     }
 
