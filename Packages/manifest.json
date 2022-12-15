@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "com.frame.jackeasing": "ssh://git@github.com/chenwansal/jackeasing.git?path=Assets/com.frame.jackeasing#main",
-    "com.frame.fpmath": "ssh://git@github.com/chenwansal/fpmath.git?path=Assets/com.frame.fpmath#main",
     "com.unity.collab-proxy": "1.15.15",
     "com.unity.feature.2d": "1.0.0",
     "com.unity.ide.rider": "3.0.13",

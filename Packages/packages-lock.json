@@ -1,18 +1,11 @@
 {
   "dependencies": {
-    "com.frame.fpmath": {
-      "version": "ssh://git@github.com/chenwansal/fpmath.git?path=Assets/com.frame.fpmath#main",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "f69eae962f247ad403d0f205b24f17de4f751efb"
-    },
     "com.frame.jackeasing": {
       "version": "ssh://git@github.com/chenwansal/jackeasing.git?path=Assets/com.frame.jackeasing#main",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "5712dea81a7669599f409ebdb179276ed4d2515a"
+      "hash": "9b988bf2927459548ff859276f85ea496fdbcd56"
     },
     "com.unity.2d.animation": {
       "version": "7.0.4",
