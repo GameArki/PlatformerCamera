@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace PlatformerCamera {
+namespace GameArki.PlatformerCamera {
 
     public class PFConfinerComponent {
 

@@ -1,6 +1,6 @@
-using PlatformerCamera.Entities;
+using GameArki.PlatformerCamera.Entities;
 
-namespace PlatformerCamera.Facades {
+namespace GameArki.PlatformerCamera.Facades {
 
     internal static class PFFactory {
 

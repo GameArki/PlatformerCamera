@@ -1,8 +1,8 @@
 using UnityEngine;
 using JackEasing;
-using PlatformerCamera.Entities;
+using GameArki.PlatformerCamera.Entities;
 
-namespace PlatformerCamera {
+namespace GameArki.PlatformerCamera {
 
     public interface ISetterAPI {
 

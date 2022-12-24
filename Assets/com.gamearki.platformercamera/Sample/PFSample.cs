@@ -1,7 +1,7 @@
 using UnityEngine;
 using JackEasing;
 
-namespace PlatformerCamera.Sample {
+namespace GameArki.PlatformerCamera.Sample {
 
     public class PFSample : MonoBehaviour {
 

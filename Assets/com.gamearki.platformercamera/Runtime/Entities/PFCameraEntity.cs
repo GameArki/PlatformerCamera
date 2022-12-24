@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace PlatformerCamera.Entities {
+namespace GameArki.PlatformerCamera.Entities {
 
     public class PFCameraEntity {
 

@@ -1,7 +1,7 @@
 using UnityEngine;
-using PlatformerCamera.Repo;
+using GameArki.PlatformerCamera.Repo;
 
-namespace PlatformerCamera.Facades {
+namespace GameArki.PlatformerCamera.Facades {
 
     internal class AllPFContext {
 

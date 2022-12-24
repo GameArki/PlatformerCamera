@@ -1,8 +1,8 @@
 using UnityEngine;
-using PlatformerCamera.Facades;
-using PlatformerCamera.Entities;
+using GameArki.PlatformerCamera.Facades;
+using GameArki.PlatformerCamera.Entities;
 
-namespace PlatformerCamera.Phases {
+namespace GameArki.PlatformerCamera.Phases {
 
     internal class PFApplyPhase {
 

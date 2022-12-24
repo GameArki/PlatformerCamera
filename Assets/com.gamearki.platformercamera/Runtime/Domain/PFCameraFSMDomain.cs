@@ -1,8 +1,8 @@
 using UnityEngine;
-using PlatformerCamera.Facades;
-using PlatformerCamera.Entities;
+using GameArki.PlatformerCamera.Facades;
+using GameArki.PlatformerCamera.Entities;
 
-namespace PlatformerCamera.Domain {
+namespace GameArki.PlatformerCamera.Domain {
 
     internal class PFCameraFSMDomain {
 

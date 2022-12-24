@@ -1,7 +1,7 @@
 using UnityEngine;
 using JackEasing;
 
-namespace PlatformerCamera.Entities {
+namespace GameArki.PlatformerCamera.Entities {
 
     public class PFCameraFollowComponent {
 

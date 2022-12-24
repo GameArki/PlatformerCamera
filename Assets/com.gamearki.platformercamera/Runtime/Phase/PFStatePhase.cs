@@ -1,6 +1,6 @@
-using PlatformerCamera.Facades;
+using GameArki.PlatformerCamera.Facades;
 
-namespace PlatformerCamera.Phases {
+namespace GameArki.PlatformerCamera.Phases {
 
     internal class PFStatePhase {
 

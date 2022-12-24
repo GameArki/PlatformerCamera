@@ -1,9 +1,9 @@
 using JackEasing;
-using PlatformerCamera.Entities;
-using PlatformerCamera.Facades;
+using GameArki.PlatformerCamera.Entities;
+using GameArki.PlatformerCamera.Facades;
 using UnityEngine;
 
-namespace PlatformerCamera {
+namespace GameArki.PlatformerCamera {
 
     internal class SetterAPI : ISetterAPI {
 

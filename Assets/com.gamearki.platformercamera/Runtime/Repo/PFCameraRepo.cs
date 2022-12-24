@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using PlatformerCamera.Entities;
+using GameArki.PlatformerCamera.Entities;
 
-namespace PlatformerCamera.Repo {
+namespace GameArki.PlatformerCamera.Repo {
 
     internal class PFCameraRepo {
 

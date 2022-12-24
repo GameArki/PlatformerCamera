@@ -1,6 +1,6 @@
-using PlatformerCamera.Domain;
+using GameArki.PlatformerCamera.Domain;
 
-namespace PlatformerCamera.Facades {
+namespace GameArki.PlatformerCamera.Facades {
 
     internal class AllPFDomain {
 
