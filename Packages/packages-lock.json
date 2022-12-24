@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "com.frame.jackeasing": {
-      "version": "ssh://git@github.com/chenwansal/jackeasing.git?path=Assets/com.frame.jackeasing#main",
+    "com.gamearki.fpeasing": {
+      "version": "ssh://git@github.com/gamearki/FPEasing.git?path=Assets/com.gamearki.fpeasing#main",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "9b988bf2927459548ff859276f85ea496fdbcd56"
+      "hash": "c512e0dd8b17aa1e78c7246081ff2cce843f18d0"
     },
     "com.unity.2d.animation": {
       "version": "7.0.4",

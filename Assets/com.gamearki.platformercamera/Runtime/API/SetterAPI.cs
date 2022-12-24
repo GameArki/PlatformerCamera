@@ -1,4 +1,4 @@
-using JackEasing;
+using GameArki.FPEasing;
 using GameArki.PlatformerCamera.Entities;
 using GameArki.PlatformerCamera.Facades;
 using UnityEngine;

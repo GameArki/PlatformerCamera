@@ -1,5 +1,5 @@
 using UnityEngine;
-using JackEasing;
+using GameArki.FPEasing;
 
 namespace GameArki.PlatformerCamera.Sample {
 

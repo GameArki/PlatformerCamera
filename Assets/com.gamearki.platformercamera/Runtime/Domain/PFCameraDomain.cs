@@ -1,5 +1,5 @@
 using UnityEngine;
-using JackEasing;
+using GameArki.FPEasing;
 using GameArki.PlatformerCamera.Facades;
 using GameArki.PlatformerCamera.Entities;
 
