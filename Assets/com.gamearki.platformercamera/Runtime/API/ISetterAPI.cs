@@ -14,7 +14,7 @@ namespace GameArki.PlatformerCamera {
         void Move_Current(Vector3 offset);
 
         // ==== Follow ====
-        void Follow_Current(Transform target, Vector3 offset, EasingType easingType, float duration);
+        void Follow_Current(Transform target, Vector3 offset, EasingType easingXType, float xDuration, EasingType easingYType, float yDuration);
 
         // ==== Confiner ====
         void Confiner_Set_Current(bool isEnable, Vector2 min, Vector2 max);

@@ -38,8 +38,8 @@ namespace GameArki.PlatformerCamera.Domain {
         }
 
         // ==== Follow ====
-        internal void Follow_Current(PFCameraEntity cur, Transform target, Vector3 offset, EasingType easingType, float duration) {
-            cur.FollowCom.InitFollow(target, offset, easingType, duration);
+        internal void Follow_Current(PFCameraEntity cur, Transform target, Vector3 offset, EasingType easingXType, float xDuration, EasingType easingYType, float yDuration) {
+            cur.FollowCom.InitFollow(target, offset, easingXType, xDuration, easingYType, yDuration);
         }
 
         // ==== Confiner ====

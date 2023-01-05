@@ -13,22 +13,28 @@ namespace GameArki.PlatformerCamera.Entities {
         public Vector3 Offset => offset;
         public void SetOffset(Vector3 value) => offset = value;
 
-        EasingType easeingType;
-        float easeingDuration;
+        EasingType easeingYType;
+        float easeingYDuration;
+
+        EasingType easeingXType;
+        float easeingXDuration;
 
         // ==== Temp ====
         [SerializeField] Vector3 easeingCurPos;
         [SerializeField] Vector3 easeingStartPos;
         [SerializeField] Vector3 easeingDstPos;
-        [SerializeField] float easeingTime;
+        [SerializeField] float easeingYTime;
+        [SerializeField] float easeingXTime;
 
         public PFCameraFollowComponent() { }
 
-        public void InitFollow(Transform target, Vector3 offset, EasingType easingType, float easeingDuration) {
+        public void InitFollow(Transform target, Vector3 offset, EasingType easingXType, float easingXDuration, EasingType easingYType, float easeingYDuration) {
             this.followTF = target;
             this.offset = offset;
-            this.easeingType = easingType;
-            this.easeingDuration = easeingDuration;
+            this.easeingXType = easingXType;
+            this.easeingXDuration = easingXDuration;
+            this.easeingYType = easingYType;
+            this.easeingYDuration = easeingYDuration;
         }
 
         public void TickEasing(float dt) {
@@ -37,7 +43,7 @@ namespace GameArki.PlatformerCamera.Entities {
                 return;
             }
 
-            if (easeingDuration == 0) {
+            if (easeingYDuration == 0) {
                 easeingCurPos = followTF.position;
                 return;
             }
@@ -45,16 +51,19 @@ namespace GameArki.PlatformerCamera.Entities {
             if (easeingDstPos != followTF.position) {
                 easeingStartPos = easeingCurPos;
                 easeingDstPos = followTF.position;
-                easeingTime = 0;
+                easeingXTime = 0;
+                easeingYTime = 0;
             }
 
-            if (easeingTime >= easeingDuration) {
-                return;
+            if (easeingXTime < easeingXDuration) {
+                easeingXTime += dt;
+                easeingCurPos.x = EasingHelper.Ease1D(easeingXType, easeingXTime, easeingXDuration, easeingStartPos.x, easeingDstPos.x);
             }
 
-            easeingTime += dt;
-
-            easeingCurPos = EasingHelper.Ease3D(easeingType, easeingTime, easeingDuration, easeingStartPos, easeingDstPos);
+            if (easeingYTime < easeingYDuration) {
+                easeingYTime += dt;
+                easeingCurPos.y = EasingHelper.Ease1D(easeingYType, easeingYTime, easeingYDuration, easeingStartPos.y, easeingDstPos.y);
+            }
 
         }
 

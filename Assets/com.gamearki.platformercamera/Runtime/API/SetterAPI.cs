@@ -36,10 +36,10 @@ namespace GameArki.PlatformerCamera {
         }
 
         // ==== Follow ====
-        void ISetterAPI.Follow_Current(Transform target, Vector3 offset, EasingType easingType, float duration) {
+        void ISetterAPI.Follow_Current(Transform target, Vector3 offset, EasingType easingXType, float xDuration, EasingType easingYType, float yDuration) {
             var cur = ctx.Repo.Current;
             var domain = allDomain.CameraDomain;
-            domain.Follow_Current(cur, target, offset, easingType, duration);
+            domain.Follow_Current(cur, target, offset, easingXType, xDuration, easingYType, yDuration);
         }
 
         // ==== Confiner ====
