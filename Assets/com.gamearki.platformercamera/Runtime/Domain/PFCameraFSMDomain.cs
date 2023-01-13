@@ -15,7 +15,7 @@ namespace GameArki.PlatformerCamera.Domain {
         }
 
         internal void TickFollow(PFCameraEntity cam, float dt) {
-            cam.FollowCom.TickEasing(dt);
+            cam.TickEasing(dt);
         }
 
     }

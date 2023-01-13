@@ -46,6 +46,16 @@ namespace GameArki.PlatformerCamera.Domain {
         internal void Confiner_Set_Current(PFCameraEntity cur, bool isEnable, Vector2 min, Vector2 max) {
             cur.ConfinerCom.SetConfiner(isEnable, min, max);
         }
+
+        // ==== Shake ====
+        internal void ShakeOnce_Current(PFCameraEntity cur, PFShakeStateModel arg) {
+            cur.ShakeOnce(arg);
+        }
+
+        internal void ShakeSeveral_Current(PFCameraEntity cur, PFShakeStateModel[] args) {
+            cur.ShakeSeveral(args);
+        }
+
     }
 
 }

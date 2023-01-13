@@ -22,6 +22,12 @@ namespace GameArki.PlatformerCamera.Sample {
             pfCore.SetterAPI.Follow_Current(tar.transform, new Vector3(0, 0, -10), EasingType.OutExpo, 2f, EasingType.Linear, 1f);
         }
 
+        void OnGUI() {
+            if (GUI.Button(new Rect(10, 10, 100, 30), "ShakeOnce")) {
+                pfCore.SetterAPI.ShakeOnce_Current(new PFShakeStateModel(new Vector2(0.25f, 0.25f), EasingType.OutExpo, 50f, 0.5f));
+            }
+        }
+
         void Update() {
 
             var dir = Vector2.zero;

@@ -49,6 +49,19 @@ namespace GameArki.PlatformerCamera {
             domain.Confiner_Set_Current(cur, isEnable, min, max);
         }
 
+        // ==== Shake ====
+        void ISetterAPI.ShakeOnce_Current(PFShakeStateModel arg) {
+            var cur = ctx.Repo.Current;
+            var domain = allDomain.CameraDomain;
+            domain.ShakeOnce_Current(cur, arg);
+        }
+
+        void ISetterAPI.ShakeSeveral_Current(PFShakeStateModel[] args) {
+            var cur = ctx.Repo.Current;
+            var domain = allDomain.CameraDomain;
+            domain.ShakeSeveral_Current(cur, args);
+        }
+
         
     }
     

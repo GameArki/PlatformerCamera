@@ -7,6 +7,20 @@
       "dependencies": {},
       "hash": "c512e0dd8b17aa1e78c7246081ff2cce843f18d0"
     },
+    "com.gamearki.menutool": {
+      "version": "ssh://git@github.com/gamearki/arkimenutool.git?path=Assets/com.gamearki.menutool#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "44abf32ea5d0124607bc056846c038fb3dd24c81"
+    },
+    "com.gamearki.setup": {
+      "version": "ssh://git@github.com/gamearki/GameArkiSetup.git?path=Assets/com.gamearki.setup#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "41668898b81800681247a2b960d8f9d8cdc8b415"
+    },
     "com.unity.2d.animation": {
       "version": "7.0.4",
       "depth": 1,

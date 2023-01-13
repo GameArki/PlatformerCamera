@@ -19,6 +19,10 @@ namespace GameArki.PlatformerCamera {
         // ==== Confiner ====
         void Confiner_Set_Current(bool isEnable, Vector2 min, Vector2 max);
 
+        // ==== Shake ====
+        void ShakeOnce_Current(PFShakeStateModel arg);
+        void ShakeSeveral_Current(PFShakeStateModel[] args);
+
     }
 
 }
